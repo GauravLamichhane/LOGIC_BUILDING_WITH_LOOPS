@@ -1,13 +1,14 @@
-n = int(input("Enter the number"))
-a = 0
-b = 1
-next = b
-sum = 0
-count = 1
-while count <= n:
-    print(next, end=" ")
-    sum += next
-    count += 1
-    a, b = b, next
-    next = a + b
-print(f"\nSum: {sum}")
+n = int(input("Enter the number: "))
+odd_sum = 0
+even_sum = 0
+while True:
+    digit = n % 10
+    if digit % 2 == 0:
+        even_sum += digit
+    else:
+        odd_sum += digit
+    n = n // 10
+    if n <= 0:
+        break
+print(even_sum)
+print(odd_sum)
