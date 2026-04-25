@@ -48,27 +48,28 @@
 # 7. Print a matrix, then calculate and display the sum of each row and the sum of
 # each column.
 
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-for row in matrix:
-    for val in row:
-        print(val, end=" ")
-    print()
-
-for row in matrix:
-    print("Row sum:", sum(row))
-
-for col in range(len(matrix[0])):
-    col_sum = 0
-    for row in range(len(matrix)):
-        col_sum += matrix[row][col]
-    print("Column sum:", col_sum)
-
-# 8. Print all Pythagorean triplets whose values are less than or equal to n.
-
-
 # matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# for row in matrix:
+#     for val in row:
+#         print(val, end=" ")
+#     print()
+
+# for row in matrix:
+#     print("Row sum:", sum(row))
+
 # for col in range(len(matrix[0])):
 #     col_sum = 0
 #     for row in range(len(matrix)):
 #         col_sum += matrix[row][col]
+#     print("Column sum:", col_sum)
+
+# 8. Print all Pythagorean triplets whose values are less than or equal to n.
+# a ^ 2 + b ^ 2 = c ^ 2 e.g (3, 4, 5) => 3 ** 2 + 4 ** 2 = 9 + 16 = 25 = 5 ** 2
+
+n = int(input("Enter the number: "))
+for a in range(1, n + 1):
+    for b in range(1, n + 1):
+        for c in range(1, n + 1):
+            if a**2 + b**2 == c**2:
+                print(a, b, c)
